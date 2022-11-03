@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import { useEffect, useState } from "react";
 import {
 	connectWallet,
@@ -12,11 +13,13 @@ const Minter = (props) => {
 	const [walletAddress, setWallet] = useState("");
 	const [description, setDescription] = useState("");
 
-	useEffect(async () => {
-		const { address, status } = await getCurrentWalletConnected();
-		setWallet(address);
-		setStatus(status);
-		addWalletListener();
+	useEffect(() => {
+		(async function requestCurrentWalletConnection() {
+			const { address, status } = await getCurrentWalletConnected();
+			setWallet(address);
+			setStatus(status);
+			addWalletListener();
+		})();
 	}, []);
 
 	function addWalletListener() {
