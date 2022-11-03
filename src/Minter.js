@@ -78,25 +78,25 @@ const Minter = (props) => {
 			<br></br>
 			<h1 id="title">🧙‍♂️ Alchemy NFT Minter</h1>
 			<p>
-				Simply add your asset's link, name, and description, then press "Mint"
+				Simply add your asset's link, name, and description, then click Mint NFT
 			</p>
 			<form>
-				<h2> Link to asset: </h2>
+				<h2>Link to asset </h2>
 				<input
 					type="text"
 					placeholder="e.g. https://gateway.pinata.cloud/ipfs/<hash>"
 					onChange={(event) => setURL(event.target.value)}
 				/>
-				<h2>🤔 Name: </h2>
+				<h2>Name </h2>
 				<input
 					type="text"
-					placeholder="e.g. My first NFT!"
+					placeholder="e.g. My first NFT"
 					onChange={(event) => setName(event.target.value)}
 				/>
-				<h2>✍️ Description: </h2>
+				<h2> Description </h2>
 				<input
 					type="text"
-					placeholder="e.g. Even cooler than cryptokitties ;)"
+					placeholder="e.g. Even cooler than cryptokitties"
 					onChange={(event) => setDescription(event.target.value)}
 				/>
 			</form>
